@@ -1,0 +1,77 @@
+main ()
+{
+  int D.40008;
+
+  {
+    struct b o;
+
+    try
+      {
+        a::set (&o.D.36312);
+        a::get (&o.D.36312);
+        _1 = std::operator<< <std::char_traits<char> > (&cout, "o.a");
+        _2 = o.D.36312.a;
+        _3 = std::basic_ostream<char>::operator<< (_1, _2);
+        std::basic_ostream<char>::operator<< (_3, endl);
+        _4 = std::operator<< <std::char_traits<char> > (&cout, "o.b7");
+        _5 = o.D.36312.b;
+        _6 = std::basic_ostream<char>::operator<< (_4, _5);
+        std::basic_ostream<char>::operator<< (_6, endl);
+      }
+    finally
+      {
+        o = {CLOBBER};
+      }
+  }
+  D.40008 = 0;
+  return D.40008;
+}
+
+
+a::set (struct a * const this)
+{
+  _1 = std::operator<< <std::char_traits<char> > (&cout, "enter the data");
+  std::basic_ostream<char>::operator<< (_1, endl);
+  _2 = &this->a;
+  _3 = std::basic_istream<char>::operator>> (&cin, _2);
+  _4 = &this->b;
+  std::basic_istream<char>::operator>> (_3, _4);
+}
+
+
+a::get (struct a * const this)
+{
+  _1 = std::operator<< <std::char_traits<char> > (&cout, "a-");
+  _2 = this->a;
+  _3 = std::basic_ostream<char>::operator<< (_1, _2);
+  std::basic_ostream<char>::operator<< (_3, endl);
+  _4 = std::operator<< <std::char_traits<char> > (&cout, "b-");
+  _5 = this->b;
+  _6 = std::basic_ostream<char>::operator<< (_4, _5);
+  std::basic_ostream<char>::operator<< (_6, endl);
+}
+
+
+__static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.40022>; else goto <D.40023>;
+  <D.40022>:
+  if (__priority == 65535) goto <D.40024>; else goto <D.40025>;
+  <D.40024>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  goto <D.40026>;
+  <D.40025>:
+  <D.40026>:
+  goto <D.40027>;
+  <D.40023>:
+  <D.40027>:
+}
+
+
+_GLOBAL__sub_I_main ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+

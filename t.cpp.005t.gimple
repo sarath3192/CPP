@@ -1,0 +1,56 @@
+main ()
+{
+  int D.39887;
+
+  {
+    int x;
+    int & rv;
+
+    try
+      {
+        x = 10;
+        rv = &x;
+        _1 = *rv;
+        _2 = std::basic_ostream<char>::operator<< (&cout, _1);
+        std::basic_ostream<char>::operator<< (_2, endl);
+        x.0_3 = x;
+        _4 = std::basic_ostream<char>::operator<< (&cout, x.0_3);
+        std::basic_ostream<char>::operator<< (_4, endl);
+        _5 = std::basic_ostream<char>::operator<< (&cout, rv);
+        std::basic_ostream<char>::operator<< (_5, endl);
+        _6 = std::basic_ostream<char>::operator<< (&cout, &x);
+        std::basic_ostream<char>::operator<< (_6, endl);
+      }
+    finally
+      {
+        x = {CLOBBER};
+      }
+  }
+  D.39887 = 0;
+  return D.39887;
+}
+
+
+__static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.39895>; else goto <D.39896>;
+  <D.39895>:
+  if (__priority == 65535) goto <D.39897>; else goto <D.39898>;
+  <D.39897>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  goto <D.39899>;
+  <D.39898>:
+  <D.39899>:
+  goto <D.39900>;
+  <D.39896>:
+  <D.39900>:
+}
+
+
+_GLOBAL__sub_I_main ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+

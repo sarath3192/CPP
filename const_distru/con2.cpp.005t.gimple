@@ -1,0 +1,70 @@
+main ()
+{
+  int D.39934;
+
+  {
+    struct A obj1;
+    struct A obj2;
+
+    try
+      {
+        A::A (&obj1);
+        obj2 = obj1;
+        A::get_data (&obj1);
+        A::get_data (&obj2);
+      }
+    finally
+      {
+        obj1 = {CLOBBER};
+        obj2 = {CLOBBER};
+      }
+  }
+  D.39934 = 0;
+  return D.39934;
+}
+
+
+A::A (struct A * const this)
+{
+  MEM[(struct  &)this] = {CLOBBER};
+  {
+    this->x = 10;
+    this->y = 20;
+  }
+}
+
+
+A::get_data (struct A * const this)
+{
+  _1 = this->x;
+  _2 = std::basic_ostream<char>::operator<< (&cout, _1);
+  _3 = std::operator<< <std::char_traits<char> > (_2, " ");
+  _4 = this->y;
+  _5 = std::basic_ostream<char>::operator<< (_3, _4);
+  std::basic_ostream<char>::operator<< (_5, endl);
+}
+
+
+__static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.39941>; else goto <D.39942>;
+  <D.39941>:
+  if (__priority == 65535) goto <D.39943>; else goto <D.39944>;
+  <D.39943>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  goto <D.39945>;
+  <D.39944>:
+  <D.39945>:
+  goto <D.39946>;
+  <D.39942>:
+  <D.39946>:
+}
+
+
+_GLOBAL__sub_I_main ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+
