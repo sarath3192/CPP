@@ -4,3 +4,4 @@ class A;
 int main()
 {
 }
+hi
